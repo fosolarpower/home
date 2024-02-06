@@ -1,0 +1,384 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: white;
+  background-image: url(https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+justify-content: center;
+
+}
+footer {
+    color: aliceblue;
+    text-align: center;
+ 
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  background-color: black;
+  padding: 1em;
+}
+
+header {
+    justify-content: center;
+}
+
+/* PART 1 */
+/* HEADER & NAV BAR & LOGO & MENU & DROPDOWN MENU */
+.navbar {
+  /* background-color: black; */
+  margin: 1em;
+  padding: 1em;
+  
+
+  /* alignment */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  /* appearance */
+  
+  
+
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  
+  
+}
+.cart_btn {
+    background-color: rgb(255, 230, 0);
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 150px;
+
+    /* behavior */
+    transition: 2 ease;
+
+
+}
+#cart {
+    color: white;
+}
+
+.cart_btn:active{
+    scale: 0.25;
+}
+
+.toggle_btn {
+    cursor: pointer;
+    color: white;
+    display: none;
+    /* display is NONE because we need to hide it */
+}
+.toggle_btn:hover {
+    color: rgb(255, 230, 0);
+}
+a {
+    text-decoration: none;
+    color: white;
+    }
+a:hover {
+        color: black;
+        font-size: larger;
+        
+       
+ }
+    
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    top: 60px;
+    background: rgba(75, 75, 75, 0.1) ;
+    backdrop-filter: blu(1.5);
+    overflow: hidden;
+    border-radius: 10px;
+    display: none;
+        /* display is NONE because we need to hide it */
+    /* height: 0; */
+        /* height is 0 because we don't need any height */
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown_menu ul {
+    padding: 2px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+.dropdown_menu .cart_btn{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* RESPONSIVE MENU */
+@media (max-width: 1019px){
+    .navbar #menu,
+    .navbar .cart_btn {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+/* PART 2 */
+/* BODY CONTENT */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.slider {
+  width: 2160px;
+  height: 360px;
+  /* background-color: black; */
+  padding: 1em;
+  /* border: solid yellow; */
+  background-image: url(https://images.unsplash.com/photo-1508790762848-8a3096277c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80);
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials,
+.partners
+ {
+  /* create */
+  width: 2160px;
+  background-color: black;
+  padding: 1em;
+  margin: 1em;
+  border: solid yellow;
+  opacity: 75%;
+  /* arrangement */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  
+}
+
+
+
+
+
+
+/* PRODUCTS AND SERVICES */
+.products_services
+ {
+  /* create */
+  width: 2160px;
+  background-color: black;
+  padding: 1em;
+  margin: 1em;
+  /* border: solid yellow; */
+  opacity:90%;
+  /* arrangement */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.supplies,
+.installation,
+.maintenance {
+  /* border: solid red; */
+  height: 430px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* IMPACT */
+.impact
+ {
+  /* create */
+  width: 2160px;
+  background-color: white;
+  padding: 1em;
+  /* margin: 1em; */
+  /* border: solid yellow; */
+  opacity: 85%;
+
+
+  /* arrangement */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  justify-content: space-around;
+}
+.tec_monitoring,
+.supporting_farmers,
+.solar_city {
+  /* border: solid black; */
+border-radius: 10px;
+  background-color: #f2f2f2f2;
+  box-shadow: black 5px 5px 50px;
+  height: 430px;
+  width: 400px;
+  text-align: center;
+}
+/* .products_services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around; 
+} */
+
+
+
+
+
+
+/* PART 4 */
+
+
+/* FOOTER */
+/* FOOTER */
+.footer {
+  /* create */
+  color:black;
+  background-color:  rgb(255, 230, 0);
+  padding: 1em;
+  /* margin: 1em; */
+  /* border: solid yellow; */
+  opacity: 95%;
+  /* arrangement */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-around;
+  }
+
+.copyright {
+color: white;
+text-align: center;
+background-color: black;
+padding: 1em;
+}
+
+
+
+
+
+/* 
+<!-- ANIMATIONS  -->
+<!-- ANIMATIONS -->
+<!-- ANIMATIONS --> */
+
+/* SLIDESHOW */
+/* 
+https://unused-css.com/blog/css-only-background-slider/ */
+  
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 20s infinite;
+    /* background-content: "CAR" white; */
+  }
+  
+  .slider .slide:nth-child(1) {
+    background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/05/featured-image-solar-water-heater.jpeg");
+    animation-delay: -0;
+  }
+  
+  .slider .slide:nth-child(2) {
+    /* background-image: url("https://cdn.decoist.com/wp-content/uploads/2019/08/Fabulous-contemporary-Mabote-House-in-South-Africa-feels-integrated-with-the-landscape.jpg"); */
+    background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/05/featured-image-solar-water-heater.jpeg");
+    animation-delay: -4s;
+    
+  }
+    
+  .slider .slide:nth-child(3) {
+    background-image: url("https://cdn.24.co.za/files/Cms/General/d/3760/af6b202781654872ad5fff752df09838.jpg");
+    /* background-image: url('https://share.america.gov/wp-content/uploads/2016/12/AP_16222499788702-1068x712.jpg'); */
+    animation-delay: -8s;
+  }
+    
+  .slider .slide:nth-child(4) {
+    /* content: "Night Lighinting " white; */
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/tropical-garden-royalty-free-image-1683899315.jpg?resize=1200:*");
+    /* background-image: url('https://cdn.chinadialogue.net/content/uploads/2023/05/01084240/20230223_Lesotho-charging-kiosk-and-solar-panels_MoliseMolise_ChinaDialogue-2400x1600.jpg'); */
+    animation-delay: -12s;
+  }
+  
+  .slider .slide:nth-child(5) {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5df7bc7b5919e977f3b1b88b/1629865778410-KV3QMX92XCRA3HW41YFU/JSG+field+8_24_21+2.jpg?format=2500w");
+    /* background-image: url('https://healingwaters.org/wp-content/uploads/2022/03/solar-powered-water-pumps.jpg'); */
+    animation-delay: -20s;
+  }
+  
+  @keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    95% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+  }
+
+  /* SLIDER TEXT */
+
