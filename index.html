@@ -2,262 +2,275 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- cssfile -->
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-    <link rel="stylesheet" href="/css/index.css">
-    <!-- <script type="text/javascript"> </script> -->
-    <title>Home</title>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Header Styles */
+.hero {
+    background: #007BFF;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #d1ecf1;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+</style>
 </head>
-
-<!-- HEADER -->
-
-<header>
-
-    <!-- NAVBAR -->
-<div>
-    <nav class="navbar"> 
-    <img .logo src="/assets/logos/Screenshot 2023-08-08 at 23.03.16.png" alt="logo" height = "100">
-    <!--MAIN MENU  -->
-    <menu id="menu">
-        <ul><a href="home">Home</a></ul>
-        <ul><a href="/html/about.html">About</a></ul>
-        <ul><a href="/html/supply.html">Supplies</a></ul>
-        <ul><a href="/html/installation.html">Installation</a></ul>
-        <ul><a href="/html/maintenance.html">Maintenance</a></ul>
-        <ul><a href="/html/contact.html">Contact Us</a></ul>
-    </menu>
-    <button class="cart_btn toggle">
-        <a href="#" style="color: black; font-weight: bold " >VIEW CART</a>
-        <i id="cart_icon" class="fa-solid fa-cart-shopping"></i>
-    </button>
-    <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-</nav>
-</div>
-
-
-<!-- DWOPDOWN MENU -->
-<div class="dropdown_menu">
-    <ul><a href="home">Home</a></ul>
-    <ul><a href="/html/about.html">About</a></ul>
-    <ul><a href="/html/supply.html">Supplies</a></ul>
-    <ul><a href="/html/installation.html">Installation</a></ul>
-    <ul><a href="/html/maintenance.html">Maintenance</a></ul>
-    <ul><a href="/html/contact.html">Contact Us</a></ul>
-    <ul>
-        <button class="cart_btn">
-            <a href="#" style="color: black; font-weight: bold " >VIEW CART</a>
-            <i style="color:black" id="cart" class="fa-solid fa-cart-shopping "></i>
-        </button>
-    </ul>
-</div>
-</header>
 <body>
-<div class="container">
-<!-- Enter PROMOTIONAL CONTENT here eg' banners, messages, and sundry with hyperlinks -->
-<!-- <span class="header_promo" >30% OFF ALL PRODUCTS AND SERVICES!
-</span> -->
-
-
-
-<!-- SLIDE SHOW -->
-    <div class="slider">         
-        <h1 style="color: white"> Go 100% Energy Independent </h1>   
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-    </div>
-
-<!-- PRODUCTS AND SERVICES -->
-    <div class="products_services" id="">
-        <div class="supplies">
-            <h2>Supplies</h2>
-            <img style="height: 200px" src="https://gosolarltd.co.ke/img/project/p1.jpg" alt="supplies">
-            <p>Our company is dedicated in offering a 
-                variety of quality solar products.
-                Browse our products to learn more about
-                how they can help you.</p>
-                <button type="button"> <a href="/html/supply.html" style="color:black" >Read More</a></button>
-        
+    <header class="hero">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">BrandName</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero-content">
+                <h1>Welcome to Our Website</h1>
+                <p>Discover the best solutions for your needs.</p>
+                <a href="#features" class="btn">Get Started</a>
+            </div>
         </div>
-        <div class="installation">
-            <h2>Systems</h2>
-            <img style="height: 175px"  src="/assets/Products/download.jpeg" alt="installation">
-            <p>We have experienced and competent
-                Engineers that carries out system
-                installation projects adhering to safety rules and 
-                 regulations. We make sure each 
-                 component of the solar panel are
-                  carefully coupled together.</p>
-                  <button type="button"> <a href="/html/supply.html" style="color:black" >Read More</a></button>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Feature One</h3>
+                    <p>Brief description of Feature One.</p>
                 </div>
-        <div class="maintenance" >
-            <h2>Maintenance</h2>
-            <img style="height: 165px" src="/assets/Application/cleaning services.jpeg" alt="maintenance">
-            <p>Proper maintenance helps to keep 
-                your solar panels working safely 
-                and efficiently. It reduces system 
-                downtime while minimizing repair 
-                costs. We also offer operations,
-                site analysis,
-                 technical design support,
-                  && performance optimisation.
-            </p>
-            <button type="button"> <a href="/html/supply.html" style="color:black" >Read More</a></button>
-        </div>
-    </div>
-
-    
-
-<!-- IMPACT -->
-    <div class="impact" >
-        <div class="tec_monitoring">
-            <a href="">
-                <img style="height: 250px"  src="https://sanbornsac.com/wp-content/webp-express/webp-images/uploads/2022/08/Sanborns_Solar-%E2%80%93-1.png.webp" alt="ongoing">
-            </a>
-            <h2>System Monitoring</h2>
-            <p>Solar power backup systems typically 
-                require very little maintenance 
-                beyond cleaning and regular 
-                inspections. You may require 
-                repairs due to age, power
-                 surges, weather, falling objects 
-                 or usage.</p>
-        </div>
-        <div class="supporting_farmers">
-            <a href="">
-                <img style="height: 210px"  src="https://futurepump.wpenginepowered.com/wp-content/uploads/2022/03/Setting-up-a-solar-water-pump-1024x576-1.jpg" alt="ongoing">
-            </a>
-            <h2>Supporting Farmers</h2>
-            <p>As panels become cheaper and
-                 increasingly portable, solar water
-                  pumps are ideal for 
-                    delivering water to 
-                    remote locations where 
-                    power lines cannot reach, 
-                    do not require expensive 
-                    and polluting fuel and are 
-                    not labour intensive.</p>
-        </div>
-        <div class="supporting_farmers" id="charging_stations">
-            <a href="">
-                <img style="height: 210px"  src="https://media.tietkiemnangluong.com.vn/Images/Upload/User/tranha/2021/10/tram-sac-6437-1632492536-3036-1634550664.jpg">
-            </a>
-            <h2>Charging Stations</h2>
-            <p>Imagine a world where bodaboda riders 
-                can have an organized park spot and 
-                charge their bikes with clean,
-                  renewable energy. Our charging station projects 
-                  are turning this vision into reality. 
-                  With a rapidly expanding network, we 
-                  are reshaping how we move, one charge 
-                  at a time.</p>
-        </div>
-        <div class="solar_city">
-            <a href="">
-                <img style="height: 250px"  src="https://techcrunch.com/wp-content/uploads/2010/07/solarcity_ebay.jpg" alt="ongoing">
-
-            </a>
-            <h2>Solar World Project</h2>
-            <p>We help businesses, schools, home 
-                owners and government agencies 
-                adopt solar power and save money 
-                using clean energy versus 
-                electricity generated from 
-                non-renewables. We design,
-                 install and provide finance 
-                 options for the development of 
-                 solar projects.</p>
-        </div>
-    </div>
-
-
-<!-- PARTNERS  -->
-
-
-<!-- TESTIMONIALS -->
-
-    <!-- CONTACT | SUPPLIES & SYSTEMS | SOCIALS -->
-    <footer class="footer" >
-        <div class="footer_contact" style="text-align: left;">
-            <embed src="https://www.google.com/maps/place/Samima+House/@-1.2843387,36.8257215,17z/data=!4m10!1m2!2m1!1sLuthuli+Lane,+Samima+House,+Ground+Floor+Room+3,+Nairobi,+Kenya!3m6!1s0x182f11297459724f:0x849d526e22451ca3!8m2!3d-1.2843387!4d36.8282964!15sCj9MdXRodWxpIExhbmUsIFNhbWltYSBIb3VzZSwgR3JvdW5kIEZsb29yIFJvb20gMywgTmFpcm9iaSwgS2VueWGSAQdjb21wYW554AEA!16s%2Fg%2F1yfdqz8zd?entry=ttu" type="map">
-                <h3>Contacts</h3>
-                    <div>
-                        <p>
-                        <i class="fa-solid fa-location-dot" ></i> Samima House, Luthuli Lane <br>
-                            Ground Floor, Shop No. 3 <br>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-envelope" ></i>  P.O BOX : 54323 00100 Nairobi, Kenya <br>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone" ></i> Tel : +254 [0]723 006 046 <br> <br>
-                            <i class="fa-solid fa-mobile" ></i> Mobile : +254 [0]724 625 138 <br>
-                        </p>
-                        <p>            
-                                <i class="fa-regular fa-envelope" ></i> Email: fosolarpowesolutions@gmail.com <br>
-                        </p>
-                    </div>
-        </div>
-        <div class="footer_supplies" style="text-align: left;">
-            <h3>Supplies</h3>
-                <div>
-                    <p>Solar Panels</p>
-                    <p>Solar Water Heaters</p>
-                    <p>Solar Water Pumps</p>
-                    <p>Solar Batteries</p>
-                    <p>Solar Inverters</p>
-                    <p>Solar Change Controllers</p>
-                    <p>Solar Appliances</p>
-                    <p>Solar Lighting</p>
+                <div class="feature-item">
+                    <h3>Feature Two</h3>
+                    <p>Brief description of Feature Two.</p>
                 </div>
+                <div class="feature-item">
+                    <h3>Feature Three</h3>
+                    <p>Brief description of Feature Three.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae lacus et dui convallis tincidunt.</p>
         </div>
-        <div class="footer_systems" style="text-align: left">
-            <h3>Systems</h3>
-                <div>
-                    <p>Power Backups</p>
-                    <p>Grid Tied</p>
-                    <p>Solar Mini Grids</p>
-                    <p>Solar Farms</p>
-                    <p>Solar Cities</p>
-                    <p>Solar Parking and Charging Station</p>
-                    <p>Solar Power Grid</p>
-                    <ul></ul>
-                </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </div>
-        <div class="footer_socials">
-            <div style="text-align: left;">
-                <h3>Resources</h3>
-                <div >
-                    <p>Product Catalogue <i class="fa-solid fa-download " ></i> </p> 
-                    <p>Business Strategy <i class="fa-solid fa-download " ></i></p>
-                    <p>Research Paper <i class="fa-solid fa-download " ></i></p>
-                </div>
-            </div> 
-            <br>
-        <div style="text-align: left;">
-            <h3> Find Us on Social Media</h3>
-            <a href="https://web.facebook.com/profile.php?id=100094977729605"><i class="fa-brands fa-facebook fa-bounce"></i></a>
-            <i class="fa-brands fa-instagram fa-flip" ></i>
-            <i class="fa-brands fa-twitter fa-bounce" ></i>
-           <a href="https://www.linkedin.com/in/oscar-omondi-%E2%98%95%EF%B8%8F%E2%98%95%EF%B8%8F%E2%98%95%EF%B8%8F-476298a3/"> <i class="fa-brands fa-linkedin fa-flip"></i></a>
-           <i class="fa-brands fa-whatsapp fa-bounce" ></i>
-        </div>   
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BrandName. All rights reserved.</p>
         </div>
     </footer>
-    <!-- <div class="copyright" > -->
-        <!-- <p style="color: white" > Tesarnxodus Ventures Copytight 2023</p> -->
-<!-- 
-    </div> -->
 
-<script src="/js/index.js"></script>    
+    <script>
+    // JavaScript for Landing Page Interactivity
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').slice(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Form submission handling
+    const contactForm = document.querySelector('.contact form');
+
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            contactForm.reset();
+        } else {
+            alert('Please fill out all fields before submitting.');
+        }
+    });
+});
+
+    </script>
 </body>
 </html>
